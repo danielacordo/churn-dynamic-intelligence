@@ -1,0 +1,35 @@
+# Core
+numpy>=1.26
+pandas>=2.2
+scipy>=1.11
+
+# Modeling
+scikit-learn>=1.4
+xgboost>=2.0
+
+# Survival analysis 
+lifelines>=0.27
+
+# SQL analysis 
+duckdb>=0.10
+
+# Visualization
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.20
+
+# Notebook execution
+jupyter>=1.0
+ipykernel>=6.29
+nbformat>=5.10
+nbconvert>=7.16
+
+# Data source (download_data.py)
+kagglehub>=0.2
+
+# Linting
+ruff>=0.4
+
+# Testing
+pytest>=8.0
+pytest-cov>=5.0

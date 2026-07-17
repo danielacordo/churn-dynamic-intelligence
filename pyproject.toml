@@ -1,0 +1,12 @@
+[tool.ruff]
+# Notebooks legitimately import after an `os.chdir(...)` path-setup cell;
+# that's a notebook convention, not a code smell, so they're excluded from
+# import-order linting rather than fought with inline noqa comments.
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint.per-file-ignores]
+# src/visualization.py is a re-export facade (see its docstring): it exists
+# so callers can do `from src.visualization import X` without knowing
+# whether X lives in visualization_plotly.py or visualization_static.py.
+# The "unused" imports are the public API of this module.
+"src/visualization.py" = ["F401"]
